@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+</head>
+<body>
+
+<form th:action="@{/userlogin/${proc}}" method="post" th:object="${login}">
+    <div>아이디 <input type="text" th:field="*{id}" value="scott"></div>
+    <div>암 호 <input type="password" th:field="*{pwd}" value="12345"></div>
+    <div>
+        <button type="reset">취소</button>
+        <button type="submit">로그인</button>
+    </div>
+</form>
+
+</body>
+</html>
